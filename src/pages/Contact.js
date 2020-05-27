@@ -7,6 +7,7 @@ class Contact extends Component {
   render() {
     return (
       <ContactContainer id="contact-page">
+        <h1 className="u-sr-only">Contact Page</h1>
         contact us page with form
       </ContactContainer>
     );

@@ -1,6 +1,7 @@
 import React from "react";
 import Home from "./pages/Home";
 import Contact from "./pages/Contact";
+import Detail from "./pages/Detail";
 import styled from "styled-components";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
@@ -14,6 +15,9 @@ function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/detail">
+            <Detail />
           </Route>
           <Route path="/contact">
             <Contact />

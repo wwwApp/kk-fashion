@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Card, Slideshow, Grid } from "kk-design-system";
+import { Card, Grid, Button } from "kk-design-system";
 import styled from "styled-components";
 
 class Home extends Component {
@@ -7,59 +7,36 @@ class Home extends Component {
   render() {
     return (
       <HomeContainer id="home-page">
-        <h1 className="u-sr-only">KK Festival</h1>
-        <section className="page-section hero-slider-section">
-          <h2 className="section-title u-sr-only">Festival info slideshow</h2>
-          <Slideshow>
-            <div className="hero-slider__slide bg--blue">
-              <div className="o-container hero-slider__slide-inner"></div>
-            </div>
-            <div className="hero-slider__slide bg--orange">
-              <div className="o-container hero-slider__slide-inner"></div>
-            </div>
-          </Slideshow>
-        </section>
-        <section className="page-section featured-artist-section">
-          <div className="o-container">
-            <h2 className="section-title">Featured artists/dates</h2>
-            <ul className="">
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-              <li>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-                vulputate ante vel turpis rutrum mollis.
-              </li>
-            </ul>
+        <h1 className="u-sr-only">KK Fashion</h1>
+        <section className="page-section featured-section bg--neutral">
+          <h2 className="section-title u-sr-only">Featured items</h2>
+          <div className="featured-items-grid">
+            <Grid colClass="two-col">
+              <div className="featured-items-grid__item featured-items-grid__item--left">
+                <img className="" src="https://picsum.photos/500/500" />
+              </div>
+              <div className="featured-items-grid__item featured-items-grid__item--right">
+                <img className="" src="https://picsum.photos/500/500" />
+                <img className="" src="https://picsum.photos/500/500" />
+              </div>
+            </Grid>
           </div>
         </section>
-        <section className="page-section ticket-section">
-          <h2 className="section-title u-sr-only">Ticket information</h2>
-          <div className="ticket-section__bg bg--green"></div>
+        <section className="page-section more-item-section">
           <div className="o-container">
-            <div className="ticket-grid">
+            <h2 className="section-title">Trending items</h2>
+            <div className="more-item-grid">
               <Grid colClass="three-col">
-                <Card />
-                <Card />
-                <Card />
+                <Card noText={true} tag="" url="/detail" />
+                <Card noText={true} tag="" url="/detail" />
+                <Card noText={true} tag="On sale" url="/detail" />
+                <Card noText={true} tag="" url="/detail" />
+                <Card noText={true} tag="" url="/detail" />
+                <Card noText={true} tag="" url="/detail" />
               </Grid>
+            </div>
+            <div className="more-btn-wrapper">
+              <Button>More items</Button>
             </div>
           </div>
         </section>
@@ -69,25 +46,36 @@ class Home extends Component {
 }
 
 const HomeContainer = styled.div`
-  .hero-slider__slide {
-    width: 100vw;
-    height: 90vh;
+  .featured-items-grid__item {
     max-height: 50rem;
-  }
+    display: flex;
+    flex-direction: column;
 
-  .featured-artist-section {
-    li {
-      padding: 0.5rem 0;
+    img {
+      object-fit: cover;
+      width: 100%;
     }
   }
 
-  .ticket-section__bg {
-    width: 100vw;
-    height: 30rem;
+  .featured-items-grid__item--left {
+    img {
+      height: 100%;
+    }
   }
 
-  .ticket-grid {
-    margin-top: -8rem;
+  .featured-items-grid__item--right {
+    img {
+      height: 50%;
+
+      &:first-child {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  .more-btn-wrapper {
+    display: flex;
+    justify-content: center;
   }
 `;
 
