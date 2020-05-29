@@ -1,7 +1,10 @@
 /* some global styles */
-
 .page-section {
   padding: 3rem 0;
+}
+
+.page-section:first-of-type {
+  padding-top: 0;
 }
 
 .section-title {

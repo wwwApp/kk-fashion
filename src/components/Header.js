@@ -1,30 +1,31 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { NavLink } from "react-router-dom";
-import { NavigationBar } from "kk-design-system";
-import logo from "./../assets/logo.svg";
+import { Header } from "kk-design-system";
+import logoSvg from "./../assets/logo.svg";
+import { Link } from "react-router-dom";
 
-class Header extends Component {
-  state = {};
-  render() {
-    return (
-      <HeaderWrapper>
-        <NavigationBar>
-          <NavLink to="/">
-            <img className="logo-icon" src={logo} />
-          </NavLink>
-          <NavLink to="/contact">Contact Us</NavLink>
-        </NavigationBar>
-      </HeaderWrapper>
-    );
-  }
-}
+const KFHeader = (props) => {
+  const logo = (
+    <Link to=".">
+      <LogoWrapper className="logo">
+        <img src={logoSvg} alt="Logo" />
+      </LogoWrapper>
+    </Link>
+  );
 
-const HeaderWrapper = styled.header`
-  .logo-icon {
-    width: 3rem;
-    height: 3rem;
+  return (
+    <HeaderWrapper>
+      <Header logo={logo} />
+    </HeaderWrapper>
+  );
+};
+
+const LogoWrapper = styled.div`
+  img {
+    width: 35px;
   }
 `;
 
-export default Header;
+const HeaderWrapper = styled.div``;
+
+export default KFHeader;

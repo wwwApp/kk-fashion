@@ -1,28 +1,23 @@
 import React, { Component } from "react";
 import styled from "styled-components";
+import { Footer } from "kk-design-system";
 
-class Footer extends Component {
-  state = {};
-
-  render() {
-    return (
-      <FooterWrapper className="footer bg--black">
-        <div className="copyright">KK © 2020</div>
-      </FooterWrapper>
-    );
-  }
-}
+const KFFooter = (props) => {
+  return (
+    <FooterWrapper className="footer-wrapper">
+      <Footer
+        title="Subscribe to our newsletter!"
+        description="Make sure you subscribe and receive latest information on upcoming
+            festivals and perks!"
+        btnText="subscribe"
+      />
+    </FooterWrapper>
+  );
+};
 
 const FooterWrapper = styled.footer`
-  width: 100vw;
-  padding: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-
-  .copyright {
-    text-align: center;
-  }
+  background-color: var(--kk-black);
+  color: var(--kk-white);
 `;
 
-export default Footer;
+export default KFFooter;
