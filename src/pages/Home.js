@@ -101,7 +101,9 @@ const HomeContainer = styled.div`
 
   .title-feature {
     padding-left: 10%;
+    padding-top: 2rem;
     font-size: 8em;
+    font-style: italic;
 
     @media only screen and (max-width: 768px) {
       font-size: 4rem;

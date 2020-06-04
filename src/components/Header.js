@@ -14,7 +14,6 @@ const KFHeader = (props) => {
   );
 
   return (
-    // need header to be blue
     <HeaderWrapper className={`bg--${props.bgColor}`}>
       <Header logo={logo} />
     </HeaderWrapper>
@@ -23,7 +22,11 @@ const KFHeader = (props) => {
 
 const LogoWrapper = styled.div`
   img {
-    width: 250px;
+    width: 150px;
+
+    @media only screen and (min-width: 768px) {
+      width: 220px;
+    }
   }
 `;
 
