@@ -1,10 +1,26 @@
 import React, { Component } from "react";
 import { Grid, Button, Card, TwoColumnHero } from "kk-design-system";
 import styled from "styled-components";
-import FeatureOne from "../assets/statement-feature.png";
+import { items } from "./../assets/data";
 
 class Detail extends Component {
-  state = {};
+  state = {
+    name: "",
+    image: "",
+    price: "",
+  };
+
+  componentDidMount() {
+    const url = window.location.href.split("/");
+    const currentItemKey = url[url.length - 1];
+
+    this.setState({
+      name: items[currentItemKey].name,
+      image: items[currentItemKey].image,
+      price: items[currentItemKey].price,
+    });
+  }
+
   render() {
     return (
       <DetailContainer id="contact-page">
@@ -12,15 +28,13 @@ class Detail extends Component {
         <section className="page-section">
           <h2 className="section-title u-sr-only">Item view</h2>
           <div className="bg--neutral">
-            <TwoColumnHero 
-              image={FeatureOne}
-              title="Hazure Statement Tee $40" 
+            <TwoColumnHero
+              image={this.state.image}
+              title={this.state.name}
               description="This limited edition tee features the word Hazure, meaning failure. 
               toto design has a close connection with this word, as it was toto's founding member's first song, which ironically was a huge success."
-              btnText="add to cart" />
-          </div>
-          <div className="o-container">
-            <h3 className="u-sr-only">Details shots of item</h3>
+              btnText="add to cart"
+            />
           </div>
         </section>
         <section className="page-section more-item-section">
@@ -28,21 +42,20 @@ class Detail extends Component {
             <h2 className="section-title">You Might Like...</h2>
           </div>
           <Grid colClass="three-col">
-          <Card noText 
-                      tag=""
-                      title="toto sole"
-                      image="https://i.imgur.com/3a72oZW.jpg" 
-                      url="/detail" />
-                <Card noText
-                      tag="" 
-                      title="kk fan coords"
-                      image="https://i.imgur.com/0crgomF.jpg"
-                      url="/detail" />
-                <Card noText={true} 
-                      tag="" 
-                      title="cargo waders"
-                      image="https://i.imgur.com/nYH42oK.jpg"
-                      url="/detail" />
+            {Object.keys(items)
+              .slice(5)
+              .map((item) => {
+                return (
+                  <Card
+                    noText
+                    url={`/detail/${item}`}
+                    tag={items[item].onSale ? "on sale" : ""}
+                    title={items[item].name}
+                    description={items[item].price}
+                    image={items[item].image}
+                  />
+                );
+              })}
           </Grid>
         </section>
       </DetailContainer>

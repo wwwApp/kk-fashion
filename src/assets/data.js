@@ -1,46 +1,63 @@
-export const albums = {
-    "item-1": {
-      title: "My Place",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/6d/NH-Album_Cover-My_Place.png/revision/latest?cb: 20200503002809",
-    },
-    "marine-song": {
-      title: "Marine Song",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/f/ff/NH-Album_Cover-Marine_Song_2001.png/revision/latest?cb: 20200503002702",
-    },
-    "spring-blossoms": {
-      title: "Spring Blossoms",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/b/bb/NH-Album_Cover-Spring_Blossoms.png/revision/latest?cb: 20200503003122",
-    },
-    "comrade-kk": {
-      title: "Comrade K.K.",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/6/67/NH-Album_Cover-Comrade_K.K..png/revision/latest?cb: 20200502232547",
-    },
-    "dj-kk": {
-      title: "DJ K.K.",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/7/7a/NH-Album_Cover-DJ_K.K..png/revision/latest?cb: 20200502232717",
-    },
-    "drivin": {
-      title: "Drivin",
-      image:"https://vignette.wikia.nocookie.net/animalcrossing/images/0/0b/NH-Album_Cover-Drivin%27.png/revision/latest?cb=20200502233001"
-    },
-    "aloha": {
-      title: "Aloha",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/5/5d/NH-Album_Cover-Aloha_K.K..png/revision/latest?cb: 20200502231742",
-    },
-    "agent-kk": {
-      title: "Agent K.K.",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/9/91/NH-Album_Cover-Agent_K.K..png/revision/latest?cb: 20200502231523",
-    },
-    "bubblegum": {
-      title: "Bubblegum",
-      image:
-        "https://vignette.wikia.nocookie.net/animalcrossing/images/e/e6/NH-Album_Cover-Bubblegum_K.K..png/revision/latest?cb: 20200502232328",
-    },
-  };
+import StatementTeeImg from "./statement-feature.png";
+import HazureStarfireImg from "./shoe-feature.png";
+
+export const items = {
+  "statement-tee": {
+    name: "Statement Tee",
+    description:
+      "This limited edition tee features the word Hazure, meaning failure. toto design has a close connection with this word, as it was toto's founding member's first song, which ironically was a huge success.",
+    price: "$40",
+    image: StatementTeeImg,
+    onSale: false,
+  },
+  "hazure-starfire": {
+    name: "Hazure Starfire",
+    description: "",
+    price: "$100",
+    image: HazureStarfireImg,
+    onSale: false,
+  },
+  "pretty-simple-w-pockets": {
+    name: "Pretty Simple w/ Pockets",
+    description: "",
+    price: "$60",
+    image: "https://i.imgur.com/4ktQA4C.jpg",
+    onSale: false,
+  },
+  "toto-timber": {
+    name: "toto x timber",
+    description: "",
+    price: "$125",
+    image: "https://i.imgur.com/URKPYYH.jpg",
+    onSale: false,
+  },
+
+  "toto-stod": {
+    name: "toto stod",
+    description: "",
+    price: "$45",
+    image: "https://i.imgur.com/12xPF5H.png",
+    onSale: true,
+  },
+  "toto-sole": {
+    name: "toto sole",
+    description: "",
+    price: "$45",
+    image: "https://i.imgur.com/3a72oZW.jpg",
+    onSale: false,
+  },
+  "kk-fan-coords": {
+    name: "kk fan coords",
+    description: "",
+    price: "$55",
+    image: "https://i.imgur.com/0crgomF.jpg",
+    onSale: false,
+  },
+  "cargo-waders": {
+    name: "cargo waders",
+    description: "",
+    price: "$79",
+    image: "https://i.imgur.com/nYH42oK.jpg",
+    onSale: false,
+  },
+};

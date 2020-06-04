@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const KFHeader = (props) => {
   const logo = (
-    <Link to=".">
+    <Link to="/">
       <LogoWrapper className="logo">
         <img src={logoSvg} alt="Logo" />
       </LogoWrapper>
@@ -15,8 +15,8 @@ const KFHeader = (props) => {
 
   return (
     // need header to be blue
-    <HeaderWrapper>
-      <Header className="bg--blue" logo={logo} />
+    <HeaderWrapper className={`bg--${props.bgColor}`}>
+      <Header logo={logo} />
     </HeaderWrapper>
   );
 };

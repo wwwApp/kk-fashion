@@ -10,13 +10,14 @@ function App() {
   return (
     <AppContainer className="App">
       <Router>
-        <Header />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route path="/detail">
+            <Header bgColor="neutral" />
             <Detail />
+          </Route>
+          <Route path="/">
+            <Header bgColor="blue" />
+            <Home />
           </Route>
         </Switch>
       </Router>
