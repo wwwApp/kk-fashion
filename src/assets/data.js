@@ -3,7 +3,7 @@ import HazureStarfireImg from "./shoe-feature.png";
 
 export const items = {
   "statement-tee": {
-    name: "Statement Tee",
+    name: "statement tee",
     description:
       "This limited edition tee features the word Hazure, meaning failure. toto design has a close connection with this word, as it was toto's founding member's first song, which ironically was a huge success.",
     price: "$40",
@@ -11,14 +11,14 @@ export const items = {
     onSale: false,
   },
   "hazure-starfire": {
-    name: "Hazure Starfire",
+    name: "hazure starfire",
     description: "",
     price: "$100",
     image: HazureStarfireImg,
     onSale: false,
   },
   "pretty-simple-w-pockets": {
-    name: "Pretty Simple w/ Pockets",
+    name: "pretty simple w/ pockets",
     description: "",
     price: "$60",
     image: "https://i.imgur.com/4ktQA4C.jpg",

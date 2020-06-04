@@ -23,7 +23,7 @@ class Home extends Component {
                   <a href="/detail/statement-tee">
                     <img className="" src={FeatureOne} />
                     <div className="featured__item--text f-heading-2">
-                      Statement Tee | $40
+                      statement tee | $40
                     </div>
                   </a>
                 </div>
@@ -34,7 +34,7 @@ class Home extends Component {
                   <a href="/detail/hazure-starfire">
                     <img className="" src={FeatureThree} />
                     <div className="featured__item--text f-heading-2">
-                      Hazure Starfire
+                      hazure starfire
                     </div>
                   </a>
                 </div>
