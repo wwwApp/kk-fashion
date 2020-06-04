@@ -14,15 +14,16 @@ const KFHeader = (props) => {
   );
 
   return (
+    // need header to be blue
     <HeaderWrapper>
-      <Header logo={logo} />
+      <Header className="bg--blue" logo={logo} />
     </HeaderWrapper>
   );
 };
 
 const LogoWrapper = styled.div`
   img {
-    width: 35px;
+    width: 250px;
   }
 `;
 

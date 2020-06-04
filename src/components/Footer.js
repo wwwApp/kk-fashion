@@ -6,9 +6,8 @@ const KFFooter = (props) => {
   return (
     <FooterWrapper className="footer-wrapper">
       <Footer
-        title="Subscribe to our newsletter!"
-        description="Make sure you subscribe and receive latest information on upcoming
-            festivals and perks!"
+        title="Subscribe to our e-mail updates"
+        description="Subscribe and receive latest information on new drops and limited time offers."
         btnText="subscribe"
       />
     </FooterWrapper>

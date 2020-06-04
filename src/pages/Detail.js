@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Grid, Button, Card, TwoColumnHero } from "kk-design-system";
 import styled from "styled-components";
+import FeatureOne from "../assets/statement-feature.png";
 
 class Detail extends Component {
   state = {};
@@ -11,29 +12,37 @@ class Detail extends Component {
         <section className="page-section">
           <h2 className="section-title u-sr-only">Item view</h2>
           <div className="bg--neutral">
-            <TwoColumnHero btnText="add to cart" />
+            <TwoColumnHero 
+              image={FeatureOne}
+              title="Hazure Statement Tee $40" 
+              description="This limited edition tee features the word Hazure, meaning failure. 
+              toto design has a close connection with this word, as it was toto's founding member's first song, which ironically was a huge success."
+              btnText="add to cart" />
           </div>
           <div className="o-container">
             <h3 className="u-sr-only">Details shots of item</h3>
-            <div className="detail-image-list">
-              <img className="" src="https://picsum.photos/500/500" />
-              <img className="" src="https://picsum.photos/500/500" />
-              <img className="" src="https://picsum.photos/500/500" />
-              <img className="" src="https://picsum.photos/500/500" />
-            </div>
           </div>
         </section>
         <section className="page-section more-item-section">
           <div className="o-container">
-            <h2 className="section-title">others viewed...</h2>
+            <h2 className="section-title">You Might Like...</h2>
           </div>
           <Grid colClass="three-col">
-            <Card noText={true} tag="" url="/detail" />
-            <Card noText={true} tag="" url="/detail" />
-            <Card noText={true} tag="On sale" url="/detail" />
-            <Card noText={true} tag="" url="/detail" />
-            <Card noText={true} tag="" url="/detail" />
-            <Card noText={true} tag="" url="/detail" />
+          <Card noText 
+                      tag=""
+                      title="toto sole"
+                      image="https://i.imgur.com/3a72oZW.jpg" 
+                      url="/detail" />
+                <Card noText
+                      tag="" 
+                      title="kk fan coords"
+                      image="https://i.imgur.com/0crgomF.jpg"
+                      url="/detail" />
+                <Card noText={true} 
+                      tag="" 
+                      title="cargo waders"
+                      image="https://i.imgur.com/nYH42oK.jpg"
+                      url="/detail" />
           </Grid>
         </section>
       </DetailContainer>
